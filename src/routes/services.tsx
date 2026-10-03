@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import { images, pageHead } from "@/lib/site";
 
-export const Route = createFileRoute("/services")({ head: () => pageHead("Our Services", "Bespoke kitchens, wardrobes, TV units and custom woodworking for your home from Ahamba Kitchen Projects.", images.marble), component: Services });
+export const Route = createFileRoute("/services")({ head: () => pageHead("Our Services", "Bespoke kitchens, wardrobes, TV units and custom woodworking for your home from Mahamba Kitchen Projects.", images.marble), component: Services });
 
 const services = [
   { no: "01", title: "Bespoke kitchens", body: "From generous islands to considered cabinetry, kitchens designed around the way you cook, gather and live.", image: images.marble, alt: "White marble kitchen island and custom cabinetry" },

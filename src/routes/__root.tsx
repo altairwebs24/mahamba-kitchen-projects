@@ -78,9 +78,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ahamba Kitchen Projects" },
+      { title: "Mahamba Kitchen Projects" },
       { name: "description", content: "Custom kitchens, cabinetry and living spaces." },
-      { property: "og:title", content: "Ahamba Kitchen Projects" },
+      { property: "og:title", content: "Mahamba Kitchen Projects" },
       { property: "og:description", content: "Custom kitchens, cabinetry and living spaces." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

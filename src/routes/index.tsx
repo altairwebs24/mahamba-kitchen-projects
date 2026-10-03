@@ -5,23 +5,21 @@ import { SiteLayout } from "@/components/site-layout";
 import { contact, images, pageHead, projects } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
-  head: () => pageHead("Bespoke Kitchens & Living Spaces", "Ahamba Kitchen Projects creates custom kitchens, cabinetry and entertainment units in Mamelodi, Pretoria.", images.hero),
+  head: () => pageHead("Bespoke Kitchens & Living Spaces", "Mahamba Kitchen Projects creates custom kitchens, cabinetry and entertainment units in Mamelodi, Pretoria.", images.hero),
   component: Index,
 });
 
 function Index() {
   return <SiteLayout>
-    <section className="site-container pt-7 pb-20 md:pt-10 md:pb-28">
-      <div className="grid items-end gap-8 lg:grid-cols-[1.12fr_.88fr] lg:gap-16">
-        <div className="image-frame order-1 aspect-[4/5] max-h-[740px] md:aspect-[5/4] lg:aspect-[4/5]"><img src={images.hero} alt="Completed white marble island kitchen by Ahamba Kitchen Projects" fetchPriority="high" /></div>
-        <div className="order-2 pb-2 lg:pb-16">
-          <p className="eyebrow mb-5 text-sage">Custom interiors · Pretoria</p>
-          <h1 className="display-title max-w-[720px]">Ahamba Kitchen Projects.<br /><em className="text-gold">Artistry</em> in wood.</h1>
-          <div className="mt-7 h-px w-14 bg-gold" />
-          <p className="body-copy mt-7 max-w-sm">Beautifully considered kitchens, wardrobes and living spaces, made to feel entirely yours.</p>
-          <Button asChild variant="sitePrimary" size="lg" className="mt-8 w-full sm:w-auto"><Link to="/projects">Explore our work <ArrowUpRight /></Link></Button>
-          <p className="mt-10 text-[10px] font-semibold uppercase tracking-[.2em] text-muted-foreground">Made for everyday living</p>
-        </div>
+    <section className="hero-photo">
+      <img className="hero-photo-image" src={images.hero} alt="Completed white marble island kitchen by Mahamba Kitchen Projects" fetchPriority="high" />
+      <div className="hero-photo-shade" aria-hidden="true" />
+      <div className="site-container hero-photo-content">
+        <p className="eyebrow mb-5 text-gold">Custom interiors · Pretoria</p>
+        <h1 className="display-title max-w-[800px]">Mahamba Kitchen Projects.<br /><em className="text-gold">Artistry</em> in wood.</h1>
+        <div className="mt-6 h-px w-14 bg-gold" />
+        <p className="mt-6 max-w-md text-sm leading-7 text-primary-foreground/90">Beautifully considered kitchens, wardrobes and living spaces, made to feel entirely yours.</p>
+        <Button asChild variant="siteGold" size="lg" className="mt-8"><Link to="/projects">Explore our work <ArrowUpRight /></Link></Button>
       </div>
     </section>
 
