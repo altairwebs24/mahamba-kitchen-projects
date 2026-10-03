@@ -31,9 +31,9 @@ export const contact = {
 export function pageHead(title: string, description: string, image?: string) {
   return {
     meta: [
-      { title: `${title} | Ahamba Kitchen Projects` },
+      { title: `${title} | Mahamba Kitchen Projects` },
       { name: "description", content: description },
-      { property: "og:title", content: `${title} | Ahamba Kitchen Projects` },
+      { property: "og:title", content: `${title} | Mahamba Kitchen Projects` },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

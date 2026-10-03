@@ -19,8 +19,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="site-header">
         <div className="site-container flex h-full items-center justify-between gap-5">
-          <Link to="/" className="brand" aria-label="Ahamba Kitchen Projects home" onClick={() => setOpen(false)}>
-            <span>Ahamba</span><small>KITCHEN PROJECTS</small>
+          <Link to="/" className="brand" aria-label="Mahamba Kitchen Projects home" onClick={() => setOpen(false)}>
+            <span>Mahamba</span><small>KITCHEN PROJECTS</small>
           </Link>
           <nav className="hidden items-center gap-9 lg:flex" aria-label="Main navigation">
             {navigation.map((item) => <Link key={item.to} to={item.to} className={`nav-link ${path === item.to ? "is-active" : ""}`}>{item.label}</Link>)}
@@ -35,11 +35,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <div className="site-container">
           <div className="footer-top"><div><p className="eyebrow text-gold">Have something in mind?</p><h2 className="display-title mt-4 max-w-2xl">Let's make room for <em>something beautiful.</em></h2></div><Button asChild variant="siteGold"><Link to="/contact">Start a project <ArrowUpRight /></Link></Button></div>
           <div className="footer-grid">
-            <div><Link to="/" className="brand brand-light"><span>Ahamba</span><small>KITCHEN PROJECTS</small></Link><p className="mt-5 max-w-xs text-sm leading-7 text-muted-light">Thoughtful kitchens, cabinetry and living spaces, crafted around the way you live.</p></div>
+            <div><Link to="/" className="brand brand-light"><span>Mahamba</span><small>KITCHEN PROJECTS</small></Link><p className="mt-5 max-w-xs text-sm leading-7 text-muted-light">Thoughtful kitchens, cabinetry and living spaces, crafted around the way you live.</p></div>
             <div><p className="footer-label">Explore</p>{navigation.map(item => <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>)}</div>
             <div><p className="footer-label">Get in touch</p><a className="footer-link" href={contact.phoneHref}>{contact.phone}</a><a className="footer-link break-all" href={`mailto:${contact.email}`}>{contact.email}</a><p className="mt-5 max-w-xs text-sm leading-6 text-muted-light">{contact.address}</p></div>
           </div>
-          <div className="footer-bottom"><span>© {new Date().getFullYear()} Ahamba Kitchen Projects</span><span>Crafted for living.</span></div>
+          <div className="footer-bottom"><span>© {new Date().getFullYear()} Mahamba Kitchen Projects</span><span>Crafted for living.</span></div>
         </div>
       </footer>
     </div>

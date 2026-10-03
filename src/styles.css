@@ -21,6 +21,7 @@
   --accent-foreground: var(--foreground);
   --gold: oklch(0.69 0.093 77);
   --sage: oklch(0.42 0.038 151);
+  --hero-shadow: oklch(0.12 0.008 70);
   --destructive: oklch(0.58 0.19 26);
   --destructive-foreground: var(--primary-foreground);
   --border: oklch(0.80 0.014 75);
@@ -83,6 +84,11 @@ a { text-decoration: none; }
 .body-copy { color: var(--muted-foreground); line-height: 1.85; font-size: 14px; }
 .image-frame { overflow: hidden; background: var(--secondary); }
 .image-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .65s ease; }
+.hero-photo { position: relative; min-height: 510px; height: min(76svh, 760px); display: flex; align-items: end; overflow: hidden; background: var(--hero-shadow); color: var(--primary-foreground); }
+.hero-photo-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 48%; }
+.hero-photo-shade { position: absolute; inset: 0; background: linear-gradient(90deg, color-mix(in oklab, var(--hero-shadow) 91%, transparent) 0%, color-mix(in oklab, var(--hero-shadow) 62%, transparent) 46%, color-mix(in oklab, var(--hero-shadow) 18%, transparent) 100%); }
+.hero-photo-content { position: relative; z-index: 1; padding-block: 76px; }
+.hero-photo .display-title { font-size: clamp(47px, 6vw, 86px); max-width: 800px; text-wrap: balance; }
 a:hover .image-frame img { transform: scale(1.035); }
 .rule-link { display: inline-flex; align-items: center; gap: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
 .footer-band { background: var(--primary); color: var(--primary-foreground); padding: 80px 0 24px; }
@@ -95,6 +101,11 @@ a:hover .image-frame img { transform: scale(1.035); }
 .footer-link:hover { color: var(--gold); }
 .footer-bottom { display:flex; justify-content:space-between; gap:20px; padding-top:22px; border-top:1px solid color-mix(in oklab,var(--primary-foreground) 18%,transparent); color:color-mix(in oklab,var(--primary-foreground) 45%,transparent); font-size:10px; text-transform:uppercase; letter-spacing:.1em; }
 @media (max-width: 767px) {
+  .hero-photo { min-height: 480px; height: min(78svh, 650px); }
+  .hero-photo-image { object-position: 50% center; }
+  .hero-photo-shade { background: linear-gradient(0deg, color-mix(in oklab, var(--hero-shadow) 94%, transparent) 0%, color-mix(in oklab, var(--hero-shadow) 64%, transparent) 52%, color-mix(in oklab, var(--hero-shadow) 12%, transparent) 100%); }
+  .hero-photo-content { padding-block: 38px; }
+  .hero-photo .display-title { font-size: clamp(44px, 12vw, 58px); }
   .site-container { width: min(100% - 40px, 1360px); }
   .site-header { height: 72px; }
   .mobile-nav { top: 72px; }
