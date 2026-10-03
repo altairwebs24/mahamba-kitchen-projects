@@ -7,9 +7,16 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Explicit plugins array so external tooling (e.g. Wrangler/Cloudflare
+  // auto-configure, which fails with "could not find a valid plugins array"
+  // otherwise) has a valid array it can detect and modify.
+  // Keep it EMPTY: the wrapper above already injects tanstackStart, viteReact,
+  // tailwindcss, nitro (Cloudflare target), etc. Listing any of them here
+  // would break the build with duplicate plugins.
+  plugins: [],
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
   },
-});
+} as Parameters<typeof defineConfig>[0]);
